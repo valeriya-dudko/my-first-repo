@@ -1,5 +1,6 @@
-const { test, expect } = require('@playwright/test');
-test.describe('Авторизация на Sauce Demo', () => {
+import {test, expect} from '@playwright/test';
+
+test.describe('Авторизация на Sauce Demo @ui', () => {
   // Создаем тест-кейс
   test('Пользователь должен успешно войти в систему', async ({ page }) => {
     await page.goto('https://www.saucedemo.com/');

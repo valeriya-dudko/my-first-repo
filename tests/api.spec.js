@@ -18,7 +18,7 @@ let testData =
     "additionalneeds": "Late check-in"
 }
 
-test.describe('API тесты для Restful-booker', () => {
+test.describe('API тесты для Restful-booker @api', () => {
     const baseURL = 'https://restful-booker.herokuapp.com';
 
     test('Создание бронирования', async ({ request }) => {

@@ -6,7 +6,7 @@ import {CheckoutStepOnePage} from '../pages/checkout.one.page';
 import {CheckoutStepTwoPage} from '../pages/checkout.two.page';
 import {CheckoutCompletePage} from '../pages/checkout.complete.page';
 
-test('Успешный логин и проверка страниц товаров', async ({page}) => {
+test('Успешный логин и проверка страниц товаров @ui', async ({page}) => {
     const loginPage = new LoginPage(page);
     await loginPage.open();
     await loginPage.login('standard_user', 'secret_sauce');
