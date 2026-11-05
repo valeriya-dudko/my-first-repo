@@ -1,7 +1,6 @@
 name: Manual Test Run
-
 on:
-  workflow_dispatch:
+  workflow_dispatch: 
 jobs:
   run-tests:
     runs-on: ubuntu-latest
@@ -10,7 +9,7 @@ jobs:
     - name: Set up Node.js
       uses: actions/setup-node@v4
       with:
-        node-version: '24.22.1'
+        node-version: '24.22.1' 
     - name: Install dependencies
       run: npm install
     - name: Install Playwright Browsers
@@ -20,19 +19,19 @@ jobs:
       env: PLAYWRIGHT_HTML_REPORT:playwright-report-ui
     - name: Run API tests
       run: npm run tests:api -- --reporter=html 
-      env: PLAYWRIGHT_HTML_REPORT:playwright-report-api
+      env: PLAYWRIGHT_HTML_REPORT: playwright-report-api
     - name: Upload UI test report 
       if: always() 
       uses: actions/upload-artifact@v4
       with: 
         name: playwright-report-ui 
-        path: playwright-report-ui/ retention-days:7
+        path: playwright-report-ui/ retention-days: 7
     - name: Upload API test report 
       if: always() 
       uses: actions/upload-artifact@v4 
       with: 
         name: playwright-report-api 
-        path: playwright-report-api/ retention-days:7
+        path: playwright-report-api/ retention-days: 7
 
 
 
