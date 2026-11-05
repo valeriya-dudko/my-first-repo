@@ -3,7 +3,11 @@
   "version": "1.0.0",
   "description": "Здесь будут автотесты Playwright",
   "main": "index.js",
-  "scripts": {},
+  "scripts": {
+    "tests:ui": "npx playwright test --grep @ui",
+    "tests:api": "npx playwright test --grep @api",
+    "tests:all": "npx playwright test"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/valeriya-dudko/my-first-repo.git"
